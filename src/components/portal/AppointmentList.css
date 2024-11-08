@@ -1,0 +1,101 @@
+.appointment-list {
+  background: var(--background);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-list__header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.appointment-list__filters {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.filter-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  background: var(--background-alt);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-button.active {
+  background: var(--primary);
+  color: white;
+}
+
+.appointment-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.appointment-card {
+  background: var(--background-alt);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+}
+
+.appointment-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.appointment-card__status {
+  padding: 4px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.875rem;
+}
+
+.status--confirmed {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.status--pending {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.status--cancelled {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+.appointment-card__date {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.appointment-card__service {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.appointment-card__doctor {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.appointment-card__time {
+  display: block;
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+}
+
+.appointment-card__footer {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.appointment-list__empty {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--text-secondary);
+} 

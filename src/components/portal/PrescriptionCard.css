@@ -1,0 +1,132 @@
+.prescription-card {
+  background: var(--background);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-normal);
+}
+
+.prescription-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.prescription-card__header {
+  margin-bottom: var(--spacing-md);
+}
+
+.prescription-card__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.prescription-card__title h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.prescription-card__status {
+  padding: 4px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.875rem;
+}
+
+.status--active {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.status--warning {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.status--expired {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+.prescription-card__dosage {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+.prescription-card__info {
+  display: grid;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.prescription-card__info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prescription-card__label {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.prescription-card__value {
+  color: var(--text-primary);
+}
+
+.prescription-card__details {
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+}
+
+.prescription-card__detail-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.prescription-card__instructions {
+  margin-top: var(--spacing-xs);
+  line-height: 1.6;
+}
+
+.prescription-card__side-effects {
+  margin-top: var(--spacing-xs);
+  padding-left: var(--spacing-lg);
+}
+
+.prescription-card__side-effects li {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-secondary);
+}
+
+.prescription-card__pharmacy {
+  margin-top: var(--spacing-xs);
+}
+
+.prescription-card__pharmacy p {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-secondary);
+}
+
+.prescription-card__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .prescription-card__title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .prescription-card__info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .prescription-card__actions {
+    flex-direction: column;
+  }
+} 

@@ -1,0 +1,27 @@
+.card {
+  background: var(--background);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.card--elevation-low {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card--elevation-medium {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card--elevation-high {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card--hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card--featured {
+  border-left: 4px solid var(--primary);
+} 

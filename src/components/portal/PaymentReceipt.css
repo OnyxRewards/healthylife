@@ -1,0 +1,167 @@
+.receipt-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.receipt-modal__content {
+  background: var(--background);
+  border-radius: var(--border-radius-lg);
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.receipt-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.receipt-modal__close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.receipt {
+  padding: var(--spacing-xl);
+  background: white;
+  color: #333;
+}
+
+.receipt__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.receipt__logo {
+  width: 100px;
+  height: auto;
+}
+
+.receipt__hospital h2 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.receipt__hospital p {
+  margin: 0;
+  color: #666;
+}
+
+.receipt__divider {
+  height: 1px;
+  background: #ddd;
+  margin: var(--spacing-lg) 0;
+}
+
+.receipt__details {
+  margin-bottom: var(--spacing-xl);
+}
+
+.receipt__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.receipt__row span:first-child {
+  color: #666;
+}
+
+.receipt__services {
+  margin-bottom: var(--spacing-xl);
+}
+
+.receipt__services h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.receipt__services table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.receipt__services th,
+.receipt__services td {
+  padding: var(--spacing-sm);
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.receipt__services th {
+  background: #f5f5f5;
+  font-weight: 500;
+}
+
+.receipt__services tfoot tr {
+  font-weight: 500;
+}
+
+.receipt__services tfoot tr.total {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.receipt__payment {
+  margin-bottom: var(--spacing-xl);
+}
+
+.receipt__payment h3 {
+  margin-bottom: var(--spacing-md);
+}
+
+.receipt__footer {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
+.receipt__qr {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.receipt__verification {
+  color: #666;
+  margin-bottom: var(--spacing-md);
+}
+
+.receipt__thank-you {
+  font-style: italic;
+  color: #666;
+}
+
+.receipt-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+@media print {
+  .receipt-modal__header,
+  .receipt-modal__actions {
+    display: none;
+  }
+
+  .receipt-modal__content {
+    width: 100%;
+    max-width: none;
+  }
+} 

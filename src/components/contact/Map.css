@@ -1,0 +1,17 @@
+.map-container {
+  height: 400px;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-popup-content {
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  line-height: 1.6;
+} 

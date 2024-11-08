@@ -1,0 +1,117 @@
+.medical-records {
+  padding: var(--spacing-xl) 0;
+  background: var(--background-alt);
+  min-height: calc(100vh - 80px);
+}
+
+.medical-records__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.medical-records__header h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.medical-records__header p {
+  color: var(--text-secondary);
+}
+
+.medical-records__actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.medical-records__sort {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background: var(--background);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.medical-records__filters {
+  margin-bottom: var(--spacing-xl);
+}
+
+.medical-records__categories {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.category-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  background: var(--background);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.category-button.active {
+  background: var(--primary);
+  color: white;
+}
+
+.medical-records__grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.medical-records__loading {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xl);
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--background);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.medical-records__empty {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--background);
+  border-radius: var(--border-radius-lg);
+}
+
+.medical-records__empty h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.medical-records__empty p {
+  color: var(--text-secondary);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .medical-records__header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .medical-records__actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .medical-records__categories {
+    justify-content: center;
+  }
+} 

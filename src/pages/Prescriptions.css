@@ -1,0 +1,119 @@
+.prescriptions {
+  padding: var(--spacing-xl) 0;
+  background: var(--background-alt);
+  min-height: calc(100vh - 80px);
+}
+
+.prescriptions__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.prescriptions__header h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.prescriptions__header p {
+  color: var(--text-secondary);
+}
+
+.prescriptions__filters {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.filter-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  background: var(--background);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-button.active {
+  background: var(--primary);
+  color: white;
+}
+
+.prescriptions__grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.prescriptions__loading {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xl);
+}
+
+.prescriptions__empty {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--background);
+  border-radius: var(--border-radius-lg);
+}
+
+.prescriptions__empty h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.prescriptions__empty p {
+  color: var(--text-secondary);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal__content {
+  background: var(--background);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  max-width: 500px;
+  width: 90%;
+}
+
+.modal__content h2 {
+  margin-bottom: var(--spacing-md);
+}
+
+.modal__content p {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-secondary);
+}
+
+.modal__actions {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .prescriptions__header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .prescriptions__filters {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .modal__actions {
+    flex-direction: column;
+  }
+} 

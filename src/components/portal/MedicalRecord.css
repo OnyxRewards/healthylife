@@ -1,0 +1,148 @@
+.medical-record {
+  background: var(--background);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all var(--transition-normal);
+}
+
+.medical-record:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.medical-record__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.medical-record__title {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.medical-record__title h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.medical-record__category {
+  padding: 4px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.875rem;
+}
+
+.category--consultation {
+  background: rgba(0, 102, 204, 0.1);
+  color: var(--primary);
+}
+
+.category--test {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.category--prescription {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.medical-record__date {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.medical-record__provider {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.medical-record__provider img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.medical-record__provider-name {
+  display: block;
+  font-weight: 500;
+}
+
+.medical-record__provider-specialty {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.medical-record__content {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+}
+
+.medical-record__content.expanded {
+  max-height: 1000px;
+}
+
+.medical-record__summary {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.medical-record__details {
+  display: grid;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.medical-record__detail-item {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.medical-record__detail-label {
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.medical-record__expand {
+  background: none;
+  border: none;
+  color: var(--primary);
+  padding: var(--spacing-sm) 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.medical-record__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.medical-record__action {
+  flex: 1;
+  min-width: 150px;
+}
+
+@media (max-width: 768px) {
+  .medical-record__header {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .medical-record__actions {
+    flex-direction: column;
+  }
+
+  .medical-record__action {
+    width: 100%;
+  }
+} 

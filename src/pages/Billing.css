@@ -1,0 +1,130 @@
+.billing {
+  padding: var(--spacing-xl) 0;
+  background: var(--background-alt);
+  min-height: calc(100vh - 80px);
+}
+
+.billing__header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.billing__header h1 {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.billing__header p {
+  color: var(--text-secondary);
+}
+
+.billing__overview {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+}
+
+.billing__stats {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.stat-card {
+  background: var(--background);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h3 {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-card__amount {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.billing__chart {
+  background: var(--background);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.billing__chart h3 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.chart-container {
+  height: 300px;
+}
+
+.billing__filters {
+  margin-bottom: var(--spacing-xl);
+}
+
+.filter-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  background: var(--background);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-button.active {
+  background: var(--primary);
+  color: white;
+}
+
+.billing__grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.billing__loading {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-xl);
+}
+
+.billing__empty {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--background);
+  border-radius: var(--border-radius-lg);
+}
+
+.billing__empty h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.billing__empty p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 992px) {
+  .billing__overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .billing__header {
+    text-align: center;
+  }
+
+  .filter-buttons {
+    justify-content: center;
+  }
+} 

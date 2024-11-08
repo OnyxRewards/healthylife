@@ -1,0 +1,127 @@
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.blog-post--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.blog-post__image-link {
+  display: block;
+  overflow: hidden;
+}
+
+.blog-post__image {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.blog-post--featured .blog-post__image {
+  height: 100%;
+}
+
+.blog-post__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.blog-post:hover .blog-post__image img {
+  transform: scale(1.05);
+}
+
+.blog-post__category {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  background: var(--primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.875rem;
+}
+
+.blog-post__featured-badge {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background: #ff6b6b;
+  color: white;
+  padding: 4px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.875rem;
+}
+
+.blog-post__content {
+  padding: var(--spacing-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post__meta {
+  display: flex;
+  gap: var(--spacing-md);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.blog-post__title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.blog-post__title-link:hover .blog-post__title {
+  color: var(--primary);
+}
+
+.blog-post__excerpt {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+.blog-post__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.blog-post__author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.blog-post__author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.blog-post__read-more {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .blog-post--featured {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-post--featured .blog-post__image {
+    height: 240px;
+  }
+} 
